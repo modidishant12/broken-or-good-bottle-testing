@@ -75,15 +75,15 @@ def predict(image):
         confidence = float(prediction[0][predicted_class])
         
         return {
-            "class": "BROKEN BOTTLE" 
-            if 
-            predicted_class == 0|1 else "GOOD BOTTLE",
-            
-            
-           
-            "confidence": confidence,
-            "all_predictions": prediction[0].tolist()
-        }
+    "class": (
+        "LARGELY BROKEN BOTTLE" if predicted_class == 0 
+        else "SMALL BROKEN BOTTLE" if predicted_class == 1 
+        else "GOOD BOTTLE"
+    ),
+    "confidence": confidence,
+    "all_predictions": prediction[0].tolist()
+}
+
     except Exception as e:
         st.error(f"Error during prediction: {str(e)}")
         return None
