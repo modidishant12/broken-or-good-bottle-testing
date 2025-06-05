@@ -1,6 +1,6 @@
-pip==25.1.1
+pip --upgrade 
 streamlit
-tensorflow==2.19
+tensorflow
 numpy
 pillow
 os
