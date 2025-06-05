@@ -21,7 +21,7 @@ st.write("Try clicking a product image and watch how an AI Model will classify i
 
 # Sidebar
 with st.sidebar:
-    overview_path = r"C:\ai for mfg\inspectorally\overview_dataset.jpg"
+    overview_path = r"overview_dataset.jpg"
     if os.path.exists(overview_path):
         st.image(overview_path, caption="Dataset Overview")
     st.subheader("About InspectorsAlly")
